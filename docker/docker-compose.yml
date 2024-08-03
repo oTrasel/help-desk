@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  mariadb:
+    image: mariadb:10.7
+    container_name: mariadb
+    hostname: mariadb
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports: 
+     - 3386:3306
+    environment:
+      - MARIADB_ROOT_PASSWORD=password
+      - MARIADB_DATABASE=helpdesk
+      - MARIADB_USER=helpdesk
+      - MARIADB_PASSWORD=helpdesk
+    restart: always
