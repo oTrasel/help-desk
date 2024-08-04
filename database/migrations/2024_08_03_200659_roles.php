@@ -24,6 +24,8 @@ return new class extends Migration
         //Dont modify
         DB::table('roles')->insert([
             [ 'role' => 'admin', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ],
+            [ 'role' => 'Moderator', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ],
+            [ 'role' => 'Normal', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ],
         ]);
     }
 
