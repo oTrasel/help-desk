@@ -1,0 +1,10 @@
+version: "3"
+services:
+    db:
+        image: postgres:9.6
+        environment:
+            POSTGRES_USER: api-service
+            POSTGRES_PASSWORD: api-service
+            POSTGRES_DB: api-service
+        ports:
+            - 5432:5432

@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -13,7 +14,17 @@ return new class extends Migration
      */
     public function up()
     {
-        
+        Schema::create('roles', function (Blueprint $table) {
+            $table->integer('id_role')->unsigned()->autoIncrement();
+            $table->string('role', 300);
+            $table->timestamps();
+        });
+
+
+        //Dont modify
+        DB::table('roles')->insert([
+            [ 'role' => 'admin', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ],
+        ]);
     }
 
     /**
@@ -23,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('roles');
     }
 };
