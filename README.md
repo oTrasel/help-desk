@@ -6,11 +6,17 @@
 ```
   cp .env.example .env
 ```
-
-#### Configure an postgres database in .env
 #### Install vendor an dependences
 ```
   composer install
+```
+#### Create database
+```
+  docker-compose up -d
+```
+#### Configure database in .env
+```
+  All credentials is api-service
 ```
 #### Run migrations
 ```
