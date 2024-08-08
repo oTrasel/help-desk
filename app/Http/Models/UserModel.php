@@ -5,7 +5,7 @@ namespace App\Http\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class UserModels extends Model
+class UserModel extends Model
 {
     use HasFactory;
 
@@ -16,7 +16,7 @@ class UserModels extends Model
     protected $casts = [
         'id_user' => 'string'
     ];
-    protected $hidden = ['senha', 'cpf'];
+    protected $hidden = ['password'];
     protected $fillable = [
         'id_user',
         'id_role',
